@@ -1,0 +1,63 @@
+\mode<presentation>
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\definecolor{blockgreen}{RGB}{0,128,0}
+\definecolor{blockblue}{RGB}{70,130,180}
+\definecolor{blockred}{RGB}{165,42,42}
+\definecolor{bggray}{RGB}{220,220,220}
+
+\usetheme[width=1.8cm]{PaloAlto}      % or try Darmstadt, Madrid, Warsaw, ...
+\usecolortheme{dove} % or try albatross, beaver, crane, ...
+\usefonttheme{professionalfonts}
+
+% title customize
+
+\setbeamertemplate{title page}[default][rounded=false]
+\setbeamercolor{title}{bg=bggray}
+\setbeamerfont{title}{family=\sffamily,series=\bfseries}
+
+\makeatletter
+\beamer@headheight=1.5\baselineskip  %controls the height of the headline, default is 2.5    
+\makeatother
+
+\setbeamercolor{frametitle}{bg=bggray}
+\setbeamerfont{frametitle}{family=\sffamily,series=\bfseries}
+
+% item customize
+
+\setbeamertemplate{itemize item}{\color{blue!60!black}$\bullet$}
+\setbeamertemplate{itemize subitem}{\color{blue!60!black}\scriptsize{$\bullet$}}
+\setbeamertemplate{items}[circle]
+\setbeamertemplate{section in toc}[circle]
+\setbeamertemplate{subsection in toc}[default]
+\setbeamercolor{item projected}{bg=blue!80!black,fg=white}
+
+% sidebar customize
+
+\setbeamercolor{sidebar}{bg=bggray}
+\setbeamercolor{logo}{bg=bggray}
+
+\logo{LOGO % \includegraphics[width = 0.08\textwidth]{./img/logo.png}
+}
+
+\setbeamercolor{palette sidebar secondary}{fg=blockblue}
+\setbeamercolor{palette sidebar primary}{fg=blockblue}
+\setbeamercolor{section in sidebar shaded}{fg=blockblue!40!white}
+\setbeamercolor{subsection in sidebar shaded}{fg=blockblue!40!white}
+
+% block customize
+
+\setbeamertemplate{blocks}[default]
+\setbeamercolor{block title}{bg=blockblue,fg=white}
+\setbeamercolor{block body}{bg=bggray}
+\setbeamercolor{block title example}{bg=blockgreen,fg=white}
+\setbeamercolor{block body example}{bg=bggray}
+\setbeamercolor{block title alerted}{bg=blockred,fg=white}
+\setbeamercolor{block body alerted}{bg=bggray}
+
+\mode<all>
+\endinput

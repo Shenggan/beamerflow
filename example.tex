@@ -1,0 +1,153 @@
+\documentclass[aspectratio=169]{beamer}
+%
+% Choose how your presentation looks.
+%
+% For more themes, color themes and font themes, see:
+% http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
+%
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{listings}
+\usepackage{fontspec}
+\newfontfamily\menlo{Menlo}
+
+\usetheme{BeamFlow} 
+
+% language display optimization
+
+\lstset{language=C++,
+    backgroundcolor=\color{blue!10!backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\menlo\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize\menlo, 
+    showstringspaces=false
+}
+
+\title[Beamer Template]{Beamer Template for Research Presenattion}
+\subtitle{A Brief Example}
+\author[Short Name]{Full Name}
+\institute{Where are you from?}
+\date{June 14, 2020}
+
+\begin{document}
+
+\begingroup
+\makeatletter
+\setlength{\hoffset}{-.5\beamer@sidebarwidth}
+\setbeamertemplate{navigation symbols}{}
+\makeatother
+\begin{frame}[plain]
+     \titlepage
+\end{frame}
+\endgroup
+
+% Uncomment these lines for an automatically generated outline.
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+\section{Getting Started}
+
+\begin{frame}[fragile]{Code Block}
+
+\begin{itemize}
+  \item Getting Started with a code block!
+\end{itemize}
+
+\vskip 0.5cm
+
+\begin{exampleblock}{Examples}
+  Show an example of \emph{Cpp} (with \textbf{OpenMP}) listing code block.
+  \begin{lstlisting}[firstnumber=1, label=glabels, xleftmargin=10pt] 
+#include <iostream>
+
+int main() {
+  std::cout << "hello" << std::endl;
+
+  int sum = 0;
+#pragma omp parallel for reduction(+: sum)
+  for (int i = 0; i < 10000; i++)
+    sum += i;
+}
+  \end{lstlisting}
+\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}{Cloumns}
+
+\begin{columns}
+  \begin{column}{0.5\textwidth}
+    \begin{block}{Examples}
+      Some examples of commonly used commands and features are included.
+    \end{block}
+  \end{column}
+  \begin{column}{0.45\textwidth}  %%<--- here
+    \begin{itemize}
+      \item Your introduction goes here!
+      \item Your introduction goes here!
+    \end{itemize}
+  \end{column}
+\end{columns}
+
+\vskip 1cm
+
+\begin{alertblock}{Examples 2}
+  \setbeamercolor{item projected}{bg=red!80!black,fg=white}
+  \begin{enumerate}
+    \item Chairman of the American National Standards Institute 
+    \item Served as president of the International Organization for Standardization from 2003 to 2005.
+  \end{enumerate}
+\end{alertblock}
+
+\end{frame}
+
+\section{Examples}
+
+\begin{frame}{Examples}
+
+  \begin{enumerate}
+      \item Chairman of the American National Standards Institute 
+      \item Served as president of the International Organization for Standardization from 2003 to 2005.
+  \end{enumerate}
+  
+\end{frame}
+
+\subsection{Tables and Figures}
+
+\begin{frame}{Tables and Figures}
+
+\begin{enumerate}
+    \item Chairman of the American National Standards Institute 
+    \item Served as president of the International Organization for Standardization from 2003 to 2005.
+\end{enumerate}
+
+
+\begin{table}
+\centering
+\begin{tabular}{l|r}
+Item & Quantity \\\hline
+Widgets & 42 \\
+Gadgets & 13
+\end{tabular}
+\caption{\label{tab:widgets}An example table.}
+\end{table}
+
+\end{frame}
+
+\subsection{Mathematics}
+
+\begin{frame}{Readable Mathematics}
+
+Let $X_1, X_2, \ldots, X_n$ be a sequence of independent and identically distributed random variables with $\text{E}[X_i] = \mu$ and $\text{Var}[X_i] = \sigma^2 < \infty$, and let
+\[ S_n = \frac{X_1 + X_2 + \cdots + X_n}{n}
+      = \frac{1}{n}\sum_{i}^{n} X_i \]
+denote their mean. Then as $n$ approaches infinity, the random variables $\sqrt{n}(S_n - \mu)$ converge in distribution to a normal $\mathcal{N}(0, \sigma^2)$.
+
+\end{frame}
+
+\end{document}
